@@ -1,0 +1,27 @@
+{
+    "name": "qBittorrent",
+    "developer": {
+        "link": "https://www.qbittorrent.org/"
+    },
+    "description": {
+        "short": "Open-source software alternative to µTorrent",
+        "long": "The qBittorrent project aims to provide an open-source software alternative to µTorrent. qBittorrent is based on the Qt toolkit and libtorrent-rasterbar library."
+    },
+    "architectures": [
+        { "arch": "arch_x86_64", "tag": "latest"}
+    ],
+    "ports": [8080],
+    "volumes": [
+        {
+            "mode": "rw", "type": "private",
+            "host_path": "/config",
+            "container_path": "/appdata/config"
+        },
+        {
+            "mode": "rw", "type": "private",
+            "host_path": "/downloads",
+            "container_path": "/appdata/downloads"
+        }
+    ],
+    "logo": "https://appstore-cdn.bin2bin.in/transmission.png"
+}
