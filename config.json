@@ -10,7 +10,7 @@
     "architectures": [
         { "arch": "arch_x86_64", "tag": "latest"}
     ],
-    "ports": [8080],
+    "ports": {"internal": ["8080"], "external": {}},
     "volumes": [
         {
             "mode": "rw", "type": "private",
@@ -23,5 +23,5 @@
             "container_path": "/appdata/downloads"
         }
     ],
-    "logo": "https://appstore-cdn.bin2bin.in/transmission.png"
+    "logo": "https://cdn.jsdelivr.net/gh/bin2bin-applications/qbittorrent@master/logo.png"
 }

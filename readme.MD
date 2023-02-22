@@ -6,7 +6,7 @@
 
 ## Developer
 
-<p>Click <a id="app:developer" href="https://www.qbittorrent.org/">here</a> to go to developer site</p>
+<p>Click <a id="app:developer" target="_blank" href="https://www.qbittorrent.org/">here</a> to go to developer site</p>
 
 ## Description
 <p id="app:short-description">Open-source software alternative to µTorrent</p>
