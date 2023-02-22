@@ -18,7 +18,7 @@
             "container_path": "/appdata/config"
         },
         {
-            "mode": "rw", "type": "private",
+            "mode": "rw", "type": "public",
             "host_path": "/downloads",
             "container_path": "/appdata/downloads"
         }
