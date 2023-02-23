@@ -1,27 +1,28 @@
 {
-    "name": "qBittorrent",
-    "developer": {
-        "link": "https://www.qbittorrent.org/"
+  "repo_id": "qbittorrent",
+  "name": "qBittorrent",
+  "developer": {
+    "link": "https://www.qbittorrent.org/"
+  },
+  "description": {
+    "short": "Open-source software alternative to µTorrent",
+    "long": "The qBittorrent project aims to provide an open-source software alternative to µTorrent. qBittorrent is based on the Qt toolkit and libtorrent-rasterbar library."
+  },
+  "architectures": [{ "arch": "arch_x86_64", "tag": "latest" }],
+  "ports": {"8080": {"type": "web"}},
+  "volumes": [
+    {
+      "host": "/config",
+      "type": "private",
+      "mode": "rw",
+      "bind": "/appdata/config"
     },
-    "description": {
-        "short": "Open-source software alternative to µTorrent",
-        "long": "The qBittorrent project aims to provide an open-source software alternative to µTorrent. qBittorrent is based on the Qt toolkit and libtorrent-rasterbar library."
-    },
-    "architectures": [
-        { "arch": "arch_x86_64", "tag": "latest"}
-    ],
-    "ports": {"internal": ["8080"], "external": {}},
-    "volumes": [
-        {
-            "mode": "rw", "type": "private",
-            "host_path": "/config",
-            "container_path": "/appdata/config"
-        },
-        {
-            "mode": "rw", "type": "public",
-            "host_path": "/downloads",
-            "container_path": "/appdata/downloads"
-        }
-    ],
-    "logo": "https://cdn.jsdelivr.net/gh/bin2bin-applications/qbittorrent@master/logo.png"
+    {
+      "host": "/downloads",
+      "type": "shared",
+      "mode": "rw",
+      "bind": "/appdata/downloads"
+    }
+  ],
+  "logo": "https://cdn.jsdelivr.net/gh/bin2bin-applications/qbittorrent@master/logo.png"
 }
