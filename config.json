@@ -12,13 +12,13 @@
   "ports": {"8080": {"type": "web"}},
   "volumes": [
     {
-      "host": "/config",
+      "host": "config",
       "type": "private",
       "mode": "rw",
       "bind": "/appdata/config"
     },
     {
-      "host": "/downloads",
+      "host": "downloads",
       "type": "shared",
       "mode": "rw",
       "bind": "/appdata/downloads"
